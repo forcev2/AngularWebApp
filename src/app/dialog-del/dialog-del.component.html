@@ -1,0 +1,7 @@
+<div mat-dialog-content class="userEdit">
+    Do you want to delete user <br> {{datar.first_name}} {{datar.last_name}} ({{datar.email}})
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="Cancel()">Cancel</button>
+    <button mat-button [mat-dialog-close]="butChange" color="warn" (click)="confirmClick()" cdkFocusInitial>Confirm</button>
+</div>

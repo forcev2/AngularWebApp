@@ -1,0 +1,22 @@
+<h2 mat-dialog-title >{{dialogTitle}}</h2>
+<div mat-dialog-content class="userEdit">
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.userData.first_name" placeholder="First Name">
+    </mat-form-field>
+    <mat-form-field>
+            <input matInput [(ngModel)]="data.userData.last_name" placeholder="Last Name">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.userData.email" placeholder="Email">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput [(ngModel)]="data.userData.phone" placeholder="Phone">
+    </mat-form-field>
+    <mat-form-field style="width: 100%">
+        <textarea rows="4" matInput [(ngModel)]="data.userData.address" placeholder="Address"></textarea>>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="butChange" (click)="onConfifmClick()" cdkFocusInitial>Confirm</button>
+</div>
